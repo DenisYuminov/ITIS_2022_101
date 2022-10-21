@@ -24,7 +24,9 @@ var blackTeaList:[BlackTea] = [
     BlackTea(name: "Masala Chai", country: "India", packageWeight: "50 g" , fortress: "Medium"),
     BlackTea(name: "Thai Milk", country: "Thai", packageWeight: "200 g" , fortress: "Low")
     ]
+
 var reload1 = blackTeaList
+
 func getBlackTea() -> BlackTea {
     let tea = reload1[0]
     if reload1.count > 0 {

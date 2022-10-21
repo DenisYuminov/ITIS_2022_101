@@ -32,7 +32,6 @@ class CustomTableViewCell: UITableViewCell {
         ])
         stackView.axis = .vertical
         stackView.alignment = .leading
-
         contentView.addSubview(stackView)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         limbsNumberImageView.translatesAutoresizingMaskIntoConstraints = false

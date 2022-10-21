@@ -9,7 +9,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         options connectionOptions: UIScene.ConnectionOptions
     ) {
         guard let scene = (scene as? UIWindowScene) else { return }
-
         let window = UIWindow(windowScene: scene)
         self.window = window
         window.rootViewController = TableViewController()

@@ -5,6 +5,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         setup()
     }
+    
     private let tableView: UITableView = .init(frame: .zero, style: .insetGrouped)
 
     enum CellIdentifier: String {

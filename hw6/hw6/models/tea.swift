@@ -7,7 +7,6 @@ class GreenTea {
     init(name: String, description: String){
         self.name = name
         self.description = description
-        
     }
 }
 var greenTeaList:[GreenTea] = [
@@ -19,7 +18,9 @@ var greenTeaList:[GreenTea] = [
     GreenTea(name: "Shincha", description: "Hit of the season 🔥"),
     GreenTea(name: "Ichibancha", description: "")
 ]
+
 var reload = greenTeaList
+
 func getGreenTea() -> GreenTea {
     let tea = reload[0]
     if reload.count > 0 {
