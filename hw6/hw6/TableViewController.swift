@@ -71,8 +71,10 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
             configuration.imageProperties.maximumSize = CGSize(width: 70, height: 70)
             configuration.text = "\(tea.name)"
             configuration.textProperties.color = .systemGreen
-            configuration.secondaryText = "\(tea.description)"
-            configuration.secondaryTextProperties.color = .black
+            if tea.description.count > 0 {
+                configuration.secondaryText = "\(tea.description)"
+                configuration.secondaryTextProperties.color = .black
+            }
             cell.contentConfiguration = configuration
             cell.selectionStyle = .none
             return cell

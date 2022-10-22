@@ -18,10 +18,13 @@ class CustomTableViewCell: UITableViewCell {
     private let limbsNumberImageView: UIImageView = .init()
 
     func set(tea: BlackTea) {
-        nameLabel.text = tea.name
+        nameLabel.text = "🫖 \(tea.name)"
         countryLabel.text = "Country: \(tea.country)"
+        countryLabel.font = UIFont(name: "AppleSDGothicNeo-Thin", size: 20.0)
         packageWeight.text = "Package weight: \(tea.packageWeight)"
+        packageWeight.font = UIFont(name: "AppleSDGothicNeo-Thin", size: 20.0)
         fortressLabel.text = "Fortress: \(tea.fortress)"
+        fortressLabel.font = UIFont(name: "AppleSDGothicNeo-Thin", size: 20.0)
     }
 
     private func setup() {
@@ -41,8 +44,8 @@ class CustomTableViewCell: UITableViewCell {
             stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -40),
             stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
             stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
-            limbsNumberImageView.widthAnchor.constraint(equalToConstant: 30),
-            limbsNumberImageView.heightAnchor.constraint(equalToConstant: 30),
+            limbsNumberImageView.widthAnchor.constraint(equalToConstant: 20),
+            limbsNumberImageView.heightAnchor.constraint(equalToConstant: 20),
         ])
     }
     

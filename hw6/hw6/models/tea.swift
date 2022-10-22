@@ -27,6 +27,7 @@ func getGreenTea() -> GreenTea {
         reload.remove(at: 0)
     }
     if reload.count == 0 {
+        
         reload = greenTeaList
     }
     return tea
