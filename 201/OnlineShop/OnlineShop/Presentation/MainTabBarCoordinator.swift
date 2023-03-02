@@ -1,14 +1,10 @@
-//
-//  MainTabBarCoordinator.swift
-//  OnlineShop
-//
-//  Created by Teacher on 11.02.2023.
-//
+
 
 import UIKit
 
 class MainTabBarCoordinator {
     weak var tabBarController: UITabBarController?
+    weak var window: UIWindow?
 
     func start() -> UIViewController {
         let tabBarController = UITabBarController()
@@ -23,13 +19,7 @@ class MainTabBarCoordinator {
     private let storyboard: UIStoryboard = .init(name: "Main", bundle: nil)
 
     private func shopping() -> UIViewController {
-        let controller: CatalogViewController = storyboard.instantiateViewController(identifier: "CatalogViewController")
-        controller.tabBarItem = .init(
-            title: "Catalog",
-            image: .init(systemName: "cart"),
-            selectedImage: .init(systemName: "cart.fill")
-        )
-        return controller
+        return FlowCoordinator.shared.start()
     }
 
     private func profile() -> UIViewController {
