@@ -10,10 +10,13 @@ import Foundation
 class RestConfigurator {
     func configure() -> ServiceLocator {
         let serviceLocator = ServiceLocator()
-        let authorizationService = RestAuthorizationService()
+        let authorizationService = MockAuthorizationService()
+        let catalogService = MockCatalogService()
         serviceLocator.register { () -> AuthorizationService in
             authorizationService
         }
+        
+        serviceLocator.register { () -> CatalogService in catalogService}
         return serviceLocator
     }
 }

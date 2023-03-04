@@ -30,7 +30,9 @@ class MainTabBarCoordinator {
             image: .init(systemName: "cart"),
             selectedImage: .init(systemName: "cart.fill")
         )
-        return controller
+        
+
+        return CatalogCoordinator.shared.start()
     }
 
     private func profile() -> UIViewController {

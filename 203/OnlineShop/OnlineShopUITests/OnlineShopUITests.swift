@@ -1,11 +1,6 @@
-//
-//  OnlineShopUITests.swift
-//  OnlineShopUITests
-//
-//  Created by Teacher on 25.02.2023.
-//
 
 import XCTest
+@testable import OnlineShop
 
 final class OnlineShopUITests: XCTestCase {
     override func setUp() {
@@ -45,4 +40,42 @@ final class OnlineShopUITests: XCTestCase {
 
         XCTAssertFalse(alert.exists)
     }
+    
+    
+    
+
+    func testExistCellWithName() {
+        let loginField = app.textFields["LoginField"].firstMatch
+        let passwordField = app.textFields["Password"].firstMatch
+        let signInButton = app.buttons["Log in"].firstMatch
+
+        loginField.tap()
+        loginField.typeText("admin")
+        passwordField.tap()
+        passwordField.typeText("qwerty")
+        signInButton.tap()
+        
+        app.tables["catalogTableView"].staticTexts["БРАЗИЛИЯ СЕРРАДО"].tap()
+        let productLabel = app.staticTexts["БРАЗИЛИЯ СЕРРАДО"].firstMatch
+        XCTAssertTrue(productLabel.exists)
+
+    }
+
+        
+    func testCatalogTableView() {
+        let loginField = app.textFields["LoginField"].firstMatch
+        let passwordField = app.textFields["Password"].firstMatch
+        let signInButton = app.buttons["Log in"].firstMatch
+
+        loginField.tap()
+        loginField.typeText("admin")
+        passwordField.tap()
+        passwordField.typeText("qwerty")
+        signInButton.tap()
+        
+        XCTAssertTrue(app.tables["catalogTableView"].exists)
+        XCTAssertTrue(app.tables["catalogTableView"].cells.count != 0)
+    }
+    
+
 }

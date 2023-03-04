@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92CD47E829B1DC27004F6151 /* CatalogPresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD47E729B1DC27004F6151 /* CatalogPresentor.swift */; };
+		92CD47EA29B1DC53004F6151 /* CatalogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD47E929B1DC53004F6151 /* CatalogService.swift */; };
+		92CD47ED29B1DC75004F6151 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD47EC29B1DC75004F6151 /* Product.swift */; };
+		92CD47EF29B1DCA9004F6151 /* CatalogCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD47EE29B1DCA9004F6151 /* CatalogCoordinator.swift */; };
+		92CD47F129B1DCDD004F6151 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD47F029B1DCDD004F6151 /* ProductViewController.swift */; };
+		92CD47F429B22680004F6151 /* CatalogPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD47F329B22680004F6151 /* CatalogPresenterTests.swift */; };
+		92CD47FC29B265FE004F6151 /* PresentorDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD47FB29B265FE004F6151 /* PresentorDelegateMock.swift */; };
 		AE01A04A29AA287C003DCB69 /* MockLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE01A04929AA287C003DCB69 /* MockLoginView.swift */; };
 		AE01A05229AA2DBE003DCB69 /* OnlineShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE01A05129AA2DBE003DCB69 /* OnlineShopUITests.swift */; };
 		AE62A6D02997C44A00276B3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE62A6CF2997C44A00276B3A /* AppDelegate.swift */; };
@@ -50,6 +57,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		92CD47E729B1DC27004F6151 /* CatalogPresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogPresentor.swift; sourceTree = "<group>"; };
+		92CD47E929B1DC53004F6151 /* CatalogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogService.swift; sourceTree = "<group>"; };
+		92CD47EC29B1DC75004F6151 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		92CD47EE29B1DCA9004F6151 /* CatalogCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCoordinator.swift; sourceTree = "<group>"; };
+		92CD47F029B1DCDD004F6151 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		92CD47F329B22680004F6151 /* CatalogPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogPresenterTests.swift; sourceTree = "<group>"; };
+		92CD47FB29B265FE004F6151 /* PresentorDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentorDelegateMock.swift; sourceTree = "<group>"; };
 		AE01A04929AA287C003DCB69 /* MockLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginView.swift; sourceTree = "<group>"; };
 		AE01A04F29AA2DBE003DCB69 /* OnlineShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnlineShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE01A05129AA2DBE003DCB69 /* OnlineShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineShopUITests.swift; sourceTree = "<group>"; };
@@ -104,10 +118,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92CD47EB29B1DC6B004F6151 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92CD47EC29B1DC75004F6151 /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		92CD47F229B1DCE1004F6151 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				92CD47F029B1DCDD004F6151 /* ProductViewController.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
 		AE01A04829AA2873003DCB69 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
 				AE01A04929AA287C003DCB69 /* MockLoginView.swift */,
+				92CD47FB29B265FE004F6151 /* PresentorDelegateMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -143,6 +174,7 @@
 		AE62A6CE2997C44A00276B3A /* OnlineShop */ = {
 			isa = PBXGroup;
 			children = (
+				92CD47EB29B1DC6B004F6151 /* Model */,
 				AE6F74F929A0F21000B17CFC /* Dependencies */,
 				AE62A6E62997C5CB00276B3A /* Services */,
 				AE62A6E32997C4FD00276B3A /* Presentation */,
@@ -159,12 +191,14 @@
 		AE62A6E32997C4FD00276B3A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				92CD47F229B1DCE1004F6151 /* Product */,
 				AE62A6F12997D47800276B3A /* Profile */,
 				AE62A6F02997D46A00276B3A /* Catalog */,
 				AE62A6E92997CB7200276B3A /* Login */,
 				AE62A6E42997C51800276B3A /* AppCoordinator.swift */,
 				AE62A6EE2997D43200276B3A /* MainTabBarCoordinator.swift */,
 				AE6F74F329A0EDD700B17CFC /* SignInCoordinator.swift */,
+				92CD47EE29B1DCA9004F6151 /* CatalogCoordinator.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -175,6 +209,7 @@
 				AE62A6E72997C60E00276B3A /* AuthorizationService.swift */,
 				AE6F74EE29A0E98B00B17CFC /* MockAuthorizationService.swift */,
 				AE6F74F029A0E99600B17CFC /* RestAuthorizationService.swift */,
+				92CD47E929B1DC53004F6151 /* CatalogService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -194,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				AE62A6F22997D48800276B3A /* CatalogViewController.swift */,
+				92CD47E729B1DC27004F6151 /* CatalogPresentor.swift */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -221,6 +257,7 @@
 			children = (
 				AE01A04829AA2873003DCB69 /* Mocks */,
 				AEF88E7729AA25CB0076F3DA /* LoginPresenterTests.swift */,
+				92CD47F329B22680004F6151 /* CatalogPresenterTests.swift */,
 			);
 			path = OnlineShopTests;
 			sourceTree = "<group>";
@@ -365,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE62A6F32997D48800276B3A /* CatalogViewController.swift in Sources */,
+				92CD47EF29B1DCA9004F6151 /* CatalogCoordinator.swift in Sources */,
 				AE6F74F629A0EEC400B17CFC /* ConfirmationController.swift in Sources */,
 				AE62A6ED2997CB8C00276B3A /* LoginPresenter.swift in Sources */,
 				AE62A6E52997C51800276B3A /* AppCoordinator.swift in Sources */,
@@ -377,9 +415,13 @@
 				AE62A6F52997D4F000276B3A /* ProfileViewController.swift in Sources */,
 				AE6F74F129A0E99600B17CFC /* RestAuthorizationService.swift in Sources */,
 				AE62A6EB2997CB8200276B3A /* LoginViewController.swift in Sources */,
+				92CD47F129B1DCDD004F6151 /* ProductViewController.swift in Sources */,
 				AE62A6E82997C60E00276B3A /* AuthorizationService.swift in Sources */,
 				AE6F74F429A0EDD700B17CFC /* SignInCoordinator.swift in Sources */,
+				92CD47EA29B1DC53004F6151 /* CatalogService.swift in Sources */,
 				AE6F74FB29A0F22500B17CFC /* MockConfigurator.swift in Sources */,
+				92CD47ED29B1DC75004F6151 /* Product.swift in Sources */,
+				92CD47E829B1DC27004F6151 /* CatalogPresentor.swift in Sources */,
 				AE6F74EF29A0E98B00B17CFC /* MockAuthorizationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +431,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE01A04A29AA287C003DCB69 /* MockLoginView.swift in Sources */,
+				92CD47FC29B265FE004F6151 /* PresentorDelegateMock.swift in Sources */,
+				92CD47F429B22680004F6151 /* CatalogPresenterTests.swift in Sources */,
 				AEF88E7829AA25CB0076F3DA /* LoginPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
